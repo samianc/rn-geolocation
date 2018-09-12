@@ -4,9 +4,9 @@
 
 "use strict";
 
-var Platform = require("Platform");
+// var Platform = require("Platform");
 
-if (Platform.OS === "android") {
+// if (Platform.OS === "android") {
     var Manager = require("react-native").NativeModules.RNGeolocationManager;
     var rnGeolocation = {
         getCurrentPosition: function (onSuccess, onError, options) {
@@ -14,8 +14,8 @@ if (Platform.OS === "android") {
                 onSuccess, onError);
         },
     };
-} else {
-    var rnGeolocation = require("Geolocation");
-}
+// } else {
+//     var rnGeolocation = require("Geolocation");
+// }
 
 module.exports = rnGeolocation;
